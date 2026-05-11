@@ -1,70 +1,106 @@
-# Getting Started with Create React App
+# Enunciado do Projeto
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Projeto SPODWE2 — Website
 
-## Available Scripts
+O projeto deve ser desenvolvido em **grupos de três alunos**. Para cada grupo será sorteado um dos
+temas abaixo:
 
-In the project directory, you can run:
+1. **Aluguel de Bicicletas**  
+Exemplos de entidades: Bicicleta, Estação, Aluguel, Usuário.
 
-### `npm start`
+2. **Serviços Profissionais**  
+Exemplos de entidades: Serviço (limpeza, conserto, instalação etc), Contrato, Prestador, Cliente.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+3. **Aulas de Bem-Estar**  
+Exemplos de entidades: Aula (yoga, meditação, pilates etc), Reserva, Instrutor, Aluno.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+4. **Serviços Jurídicos**  
+Exemplos de entidades: Caso, Processo, Advogado, Cliente.
 
-### `npm test`
+5. **Venda de Ingressos**  
+Exemplos de entidades: Evento, Ingresso, Pedido, Cliente.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+6. **Delivery de Restaurante**  
+Exemplos de entidades: Prato, Restaurante, Pedido, Cliente.
 
-### `npm run build`
+7. **Catálogo de Jogos**  
+Exemplos de entidades: Jogo, Categoria, Avaliação, Usuário.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+8. **Compartilhamento de Receitas**  
+Exemplos de entidades: Receita, Ingrediente, Avaliação, Usuário.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+9. **Reserva de Passeios Turísticos**  
+Exemplos de entidades: Cidade, Roteiro, Passeio, Cliente.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Requisitos do Projeto
+1. O website deve ser desenvolvido com o framework React.
 
-### `npm run eject`
+2. O website deve apresentar dados detalhados de pelo menos **três entidades de negócio** relacionadas domínio do projeto. Por exemplo, para uma livraria poderiam ser consideradas entidades como **livro, editora, autor, área, pedido, cliente** etc.  
+**Sugestão:** Use como base a estrutura do website de exemplo apresentado em aula, a qual contém áreas para logotipo, menu de navegação, conteúdo principal e rodapé.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+3. O website deve implementar os seguintes conceitos e recursos apresentados em aula:
+   - Single Page Application;
+   - Componentização da interface de usuário;
+   - JSX (JavaScript XML)
+   - Passagem de dados com o objeto **props**;
+   - Atualização de dados com o objeto **state**;
+   - Navegação por rotas por meio da biblioteca **React Router**;
+   - Carregamento dinâmico de todo o conteúdo do website a partir de um **repositório de imagens** e de um **arquivo JSON**;
+   - Tabela com funcionalidades para criação, alteração e exclusão de registros das entidades de negócio.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Restrições do Projeto
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1. Este projeto contempla exclusivamente o desenvolvimento *front-end* do website. Por este motivo não deve existir no projeto código *back-end*, nem integração com sistemas gerenciadores de banco de dados.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+2. O website não deve apresentar ao usuário elementos de interface que não estejam funcionais.
 
-## Learn More
+## Critérios de Avaliação
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Serão avaliados no projeto:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Apresentação do website em laboratório de aula;
+- Implementação dos conceitos e recursos apresentados na disciplina;
+- Organização do código;
+- Usabilidade das funcionalidades;
+- Aparência geral do website.
 
-### Code Splitting
+## Informações para Entrega
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- **Data de Entrega:** **07/06/2026** (impreterivelmente até às **23:59**).
 
-### Analyzing the Bundle Size
+- **Forma de Entrega:** O projeto completo deverá ser entregue exclusivamente por meio do ambiente Moodle (http://eadcampus.spo.ifsp.edu.br). **Não serão aceitos links para repositórios externos.**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- **Um único integrante do grupo** deverá enviar um arquivo compactado (formato RAR ou ZIP) contendo uma pasta com todos os arquivos do projeto. Não esqueça de excluir o diretório node_modules do projeto. Se o arquivo compactado ficar maior que **10 MB** (limite do Moodle), reduza a resolução dos arquivos de imagem.
 
-### Making a Progressive Web App
+- O **nome do arquivo compactado** deverá ser composto da seguinte forma, considerando a ordem alfabética dos nomes:  
+`“ProjetoDWE2_” + “NomeSobrenomeAluno1_” + “NomeSobrenomeAluno2_” + “NomeSobrenomeAluno3”.zip`  
+**Exemplo:** `ProjetoDWE2_JoaoSilva_MariaPereira_PedroOliveira.zip`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- O grupo que não realizar a entrega no Moodle dentro do prazo ficará com **nota zero** no projeto, independentemente de se prontificar para apresentá-lo na aula.
 
-### Advanced Configuration
+## Informações para Apresentação do Projeto
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- Data da apresentação: **08/06/2026**
 
-### Deployment
+- As apresentações estão previstas para iniciarem às **08:00**.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- Cada grupo deverá apresentar seu projeto no laboratório de aula, conforme o **domínio de negócio** e a **ordem de apresentação** sorteados no dia da formação dos grupos.
 
-### `npm run build` fails to minify
+- A apresentação não deve ultrapassar 15 minutos e deve contemplar a seguinte ordem:
+  1. Breve descrição do domínio de negócio do projeto. **Obs.:** O uso de PowerPoint é opcional.
+  2. Navegação e apresentação das funcionalidades do website.
+  3. Apresentação do código, destacando os conceitos e recursos solicitados nos requisitos do projeto.
+  4. Abertura para perguntas.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- O projeto pode ser apresentado no computador instalado na mesa do professor ou em notebook próprio de um dos integrantes do grupo. Seja como for, o grupo deve estar preparado para apresentar o projeto mesmo que a internet do campus não esteja disponível no
+momento da apresentação.
+
+- Durante a apresentação, cada aluno deve direcionar sua fala para todo o público, e não apenas para o professor.
+
+- **Penalidades:**
+  
+  - **Ordem de apresentação:** A ordem de apresentação dos projetos não poderá ser modificada no dia da apresentação. Caso um grupo não apresente na sua vez, será descontado 1,0 ponto na nota do projeto, ficando a apresentação deste grupo agendada como última na ordem de apresentações. Obs.: O projeto de um grupo pode ser apresentado mesmo que um dos integrantes não esteja presente, porém este será penalizado conforme mencionado a seguir.
+
+  - **Ausência na apresentação:** O aluno ou grupo que se ausentar na apresentação ficará com metade da nota final do projeto, independentemente de ter realizado a entrega no Moodle.
+
+  - **Atraso na apresentação:** O aluno do grupo que se atrasar e não estiver presente desde o início da apresentação, ficará com 3,0 pontos a menos na nota final do projeto.
