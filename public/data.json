@@ -1,34 +1,34 @@
 {
-  "passeiosTuristicos": [
+  "passeios": [
     {
       "id": 1,
       "nome": "Tour guiado pelo centro da cidade de São Paulo",
       "descricao": "Esse tour acompanhado por guia profissional te acompanha pelo centro da famosa cidade de São Paulo, passando por grandes marcos como a Catedral da Sé no marco zero da cidade, o Pateo do Collegio onde a cidade foi fundada, o Mosteiro de São Bento, o Theatro Municipal, a Avenida Paulista e muito mais!",
       "local": "São Paulo, São Paulo - Brasil",
-      "precoPorPessoa": 250,
-      "duracaoHoras": 6,
+      "preco": 250,
+      "duracao": 6,
       "horarioInicio": "1899-12-30T13:06:28.000Z",
-      "notaAvaliacao": 4.6
+      "nota": 4.6
     },
     {
       "id": 2,
       "nome": "Passeio histórico com guia por Ouro Preto",
       "descricao": "Nesse passeio guiado pela cidade de Ouro Preto, marcada por sua história rica e grande influência do ciclo do ouro, você irá desfrutar de grandes atrações como o Museu da Inconfidência na Praça Tiradentes, a Igreja de São Francisco de Assis e a Mina do Chico Rei, além de um almoço tudo-incluso no encantador Bené da Flauta Restaurante e Café.",
       "local": "Ouro Preto, Minas Gerais - Brasil",
-      "precoPorPessoa": 300,
-      "duracaoHoras": 8,
+      "preco": 300,
+      "duracao": 8,
       "horarioInicio": "1899-12-30T11:06:28.000Z",
-      "notaAvaliacao": 4.7
+      "nota": 4.7
     },
     {
       "id": 3,
       "nome": "Cristo Redentor e Pão de Açúcar em Um Dia",
       "descricao": "Aproveite um dia inesquecível no Rio de Janeiro visitando as duas maiores atrações da cidade. Começaremos com uma subida ao Corcovado para admirar o Cristo Redentor e, à tarde, pegaremos o bondinho para o Pão de Açúcar, com tempo para relaxar na Praia de Copacabana.",
       "local": "Rio de Janeiro, Rio de Janeiro - Brasil",
-      "precoPorPessoa": 450,
-      "duracaoHoras": 8,
+      "preco": 450,
+      "duracao": 8,
       "horarioInicio": "1899-12-30T11:36:28.000Z",
-      "notaAvaliacao": 4.9
+      "nota": 4.9
     },
     {
       "id": 4,
@@ -36,10 +36,10 @@
       "nome": "Roteiro Histórico do Pelourinho e Elevador Lacerda",
       "descricao": "Mergulhe na rica cultura baiana com este passeio a pé pelo Pelourinho, o centro histórico de Salvador. Visitaremos a Igreja e Convento de São Francisco, conhecida por seu interior banhado a ouro, e finalizaremos com a vista espetacular do Elevador Lacerda e do Mercado Modelo.",
       "local": "Salvador, Bahia - Brasil",
-      "precoPorPessoa": 180,
-      "duracaoHoras": 5,
+      "preco": 180,
+      "duracao": 5,
       "horarioInicio": "1899-12-30T12:06:28.000Z",
-      "notaAvaliacao": 4.8
+      "nota": 4.8
     }
   ],
   "pontosTuristicos": [
@@ -51,9 +51,9 @@
       "cidade": "São Paulo, São Paulo - Brasil",
       "diasFuncionamento": "Todos os dias",
       "horarioDeFuncionamento": "09:00 - 17:00",
-      "precoPorPessoa": 0,
-      "notaAvaliacao": 4.6,
-      "siteOficial": "https://catedraldasesp.com/"
+      "preco": 0,
+      "nota": 4.6,
+      "site": "https://catedraldasesp.com/"
     },
     {
       "id": 2,
@@ -63,9 +63,9 @@
       "cidade": "São Paulo, São Paulo - Brasil",
       "diasFuncionamento": "Terça-feira a Sábado",
       "horarioDeFuncionamento": "09:00 - 16:45",
-      "precoPorPessoa": 26,
-      "notaAvaliacao": 4.1,
-      "siteOficial": "https://www.pateodocollegio.com.br/museu-anchieta"
+      "preco": 26,
+      "nota": 4.1,
+      "site": "https://www.pateodocollegio.com.br/museu-anchieta"
     },
     {
       "id": 3,
@@ -75,9 +75,9 @@
       "cidade": "São Paulo, São Paulo - Brasil",
       "diasFuncionamento": "Todos os dias",
       "horarioDeFuncionamento": "07:00 - 18:00 (horários podem variar)",
-      "precoPorPessoa": 0,
-      "notaAvaliacao": 4.8,
-      "siteOficial": "https://www.mosteirodesaobentosp.com.br/"
+      "preco": 0,
+      "nota": 4.8,
+      "site": "https://www.mosteirodesaobentosp.com.br/"
     },
     {
       "id": 4,
@@ -87,9 +87,9 @@
       "cidade": "São Paulo, São Paulo - Brasil",
       "diasFuncionamento": "Todos os dias",
       "horarioDeFuncionamento": "Aberto o tempo todo",
-      "precoPorPessoa": 0,
-      "notaAvaliacao": 4.6,
-      "siteOficial": ""
+      "preco": 0,
+      "nota": 4.6,
+      "site": ""
     },
     {
       "id": 5,
@@ -99,9 +99,9 @@
       "cidade": "Ouro Preto, Minas Gerais - Brasil",
       "diasFuncionamento": "Terça-feira a Sábado",
       "horarioDeFuncionamento": "10:00 - 20:00 (horários podem variar)",
-      "precoPorPessoa": 0,
-      "notaAvaliacao": 4.9,
-      "siteOficial": "https://museudainconfidencia.museus.gov.br/"
+      "preco": 0,
+      "nota": 4.9,
+      "site": "https://museudainconfidencia.museus.gov.br/"
     },
     {
       "id": 6,
@@ -111,9 +111,9 @@
       "cidade": "Ouro Preto, Minas Gerais - Brasil",
       "diasFuncionamento": "Todos os dias",
       "horarioDeFuncionamento": "Aberto o tempo todo",
-      "precoPorPessoa": 0,
-      "notaAvaliacao": 4.8,
-      "siteOficial": "https://www.ouropreto.mg.gov.br/turismo/atrativo-item/1364"
+      "preco": 0,
+      "nota": 4.8,
+      "site": "https://www.ouropreto.mg.gov.br/turismo/atrativo-item/1364"
     },
     {
       "id": 7,
@@ -123,9 +123,9 @@
       "cidade": "Ouro Preto, Minas Gerais - Brasil",
       "diasFuncionamento": "Terça-feira a Sábado",
       "horarioDeFuncionamento": "08:30 - 17:00",
-      "precoPorPessoa": 10,
-      "notaAvaliacao": 4.7,
-      "siteOficial": "https://www.ouropreto.mg.gov.br/turismo/atrativo-item/585"
+      "preco": 10,
+      "nota": 4.7,
+      "site": "https://www.ouropreto.mg.gov.br/turismo/atrativo-item/585"
     },
     {
       "id": 8,
@@ -135,9 +135,9 @@
       "cidade": "Ouro Preto, Minas Gerais - Brasil",
       "diasFuncionamento": "Todos os dias",
       "horarioDeFuncionamento": "08:00 - 17:00",
-      "precoPorPessoa": 70,
-      "notaAvaliacao": 4.5,
-      "siteOficial": "https://www.ouropreto.mg.gov.br/turismo/atrativo-item/568"
+      "preco": 70,
+      "nota": 4.5,
+      "site": "https://www.ouropreto.mg.gov.br/turismo/atrativo-item/568"
     },
     {
       "id": 9,
@@ -147,9 +147,9 @@
       "cidade": "Rio de Janeiro, Rio de Janeiro - Brasil",
       "diasFuncionamento": "Todos os dias",
       "horarioDeFuncionamento": "08:00 - 19:00",
-      "precoPorPessoa": 94,
-      "notaAvaliacao": 4.9,
-      "siteOficial": "https://santuariocristoredentor.com.br/"
+      "preco": 94,
+      "nota": 4.9,
+      "site": "https://santuariocristoredentor.com.br/"
     },
     {
       "id": 10,
@@ -159,9 +159,9 @@
       "cidade": "Rio de Janeiro, Rio de Janeiro - Brasil",
       "diasFuncionamento": "Todos os dias",
       "horarioDeFuncionamento": "08:30 - 20:00",
-      "precoPorPessoa": 160,
-      "notaAvaliacao": 4.8,
-      "siteOficial": "https://bondinho.com.br/"
+      "preco": 160,
+      "nota": 4.8,
+      "site": "https://bondinho.com.br/"
     },
     {
       "id": 11,
@@ -171,9 +171,9 @@
       "cidade": "Rio de Janeiro, Rio de Janeiro - Brasil",
       "diasFuncionamento": "Todos os dias",
       "horarioDeFuncionamento": "Aberto o tempo todo",
-      "precoPorPessoa": 0,
-      "notaAvaliacao": 4.7,
-      "siteOficial": "https://www.metrorio.com.br/NavegueRio/PontosTuristicosInterna?p_ponto=29"
+      "preco": 0,
+      "nota": 4.7,
+      "site": "https://www.metrorio.com.br/NavegueRio/PontosTuristicosInterna?p_ponto=29"
     },
     {
       "id": 12,
@@ -183,9 +183,9 @@
       "cidade": "Salvador, Bahia - Brasil",
       "diasFuncionamento": "Todos os dias",
       "horarioDeFuncionamento": "Aberto o tempo todo",
-      "precoPorPessoa": 0,
-      "notaAvaliacao": 4.7,
-      "siteOficial": ""
+      "preco": 0,
+      "nota": 4.7,
+      "site": ""
     },
     {
       "id": 13,
@@ -195,9 +195,9 @@
       "cidade": "Salvador, Bahia - Brasil",
       "diasFuncionamento": "Todos os dias",
       "horarioDeFuncionamento": "09:00 - 17:30 (horários podem variar)",
-      "precoPorPessoa": 10,
-      "notaAvaliacao": 4.8,
-      "siteOficial": "https://www.salvadordabahia.com/experiencias/igreja-e-convento-de-sao-francisco/"
+      "preco": 10,
+      "nota": 4.8,
+      "site": "https://www.salvadordabahia.com/experiencias/igreja-e-convento-de-sao-francisco/"
     },
     {
       "id": 14,
@@ -207,9 +207,9 @@
       "cidade": "Salvador, Bahia - Brasil",
       "diasFuncionamento": "Todos os dias",
       "horarioDeFuncionamento": "07:00 - 22:00",
-      "precoPorPessoa": 0.15,
-      "notaAvaliacao": 4.6,
-      "siteOficial": "https://mobilidade.salvador.ba.gov.br/elevador-lacerda/"
+      "preco": 0.15,
+      "nota": 4.6,
+      "site": "https://mobilidade.salvador.ba.gov.br/elevador-lacerda/"
     },
     {
       "id": 15,
@@ -219,9 +219,9 @@
       "cidade": "Salvador, Bahia - Brasil",
       "diasFuncionamento": "Segunda-feira a Sábado",
       "horarioDeFuncionamento": "09:00 - 18:00",
-      "precoPorPessoa": 0,
-      "notaAvaliacao": 4.5,
-      "siteOficial": "http://www.mercadomodelosalvador.com/"
+      "preco": 0,
+      "nota": 4.5,
+      "site": "http://www.mercadomodelosalvador.com/"
     }
   ],
   "reservas": [
