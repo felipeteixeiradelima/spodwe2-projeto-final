@@ -42,7 +42,7 @@
       "nota": 4.8
     }
   ],
-  "pontosTuristicos": [
+  "pontos": [
     {
       "id": 1,
       "nome": "Catedral da Sé",
@@ -230,7 +230,7 @@
       "nomeCliente": "Felipe Teixeira de Lima",
       "emailCliente": "felipeteixeiradelima@gmail.com",
       "telefoneCliente": "+55 (11) 94285-2902",
-      "passeioTuristico": 1,
+      "passeioId": 1,
       "data": "2026-07-05T03:00:00.000Z"
     },
     {
@@ -238,7 +238,7 @@
       "nomeCliente": "Rafael Teixeira Paulino",
       "emailCliente": "rafaelpaulino@hotmail.com",
       "telefoneCliente": "+55 (11) 92759-0285",
-      "passeioTuristico": 1,
+      "passeioId": 1,
       "data": "2026-09-11T03:00:00.000Z"
     },
     {
@@ -246,7 +246,7 @@
       "nomeCliente": "Amanda Jen",
       "emailCliente": "jen.amanda@outlook.com",
       "telefoneCliente": "+55 (11) 98624-2504",
-      "passeioTuristico": 2,
+      "passeioId": 2,
       "data": "2026-07-22T03:00:00.000Z"
     },
     {
@@ -254,7 +254,7 @@
       "nomeCliente": "Leticia Cardoso Furtado",
       "emailCliente": "furtadolet@gmail.com",
       "telefoneCliente": "+55 (11) 90192-1952",
-      "passeioTuristico": 2,
+      "passeioId": 2,
       "data": "2026-12-15T03:00:00.000Z"
     },
     {
@@ -262,7 +262,7 @@
       "nomeCliente": "Vinícius Thiago de Santana",
       "emailCliente": "santanavinithiago@outlook.com",
       "telefoneCliente": "+55 (11) 97489-0384",
-      "passeioTuristico": 3,
+      "passeioId": 3,
       "data": "2026-09-07T03:00:00.000Z"
     },
     {
@@ -270,7 +270,7 @@
       "nomeCliente": "Ana Maria Fausta Bonfim Santos",
       "emailCliente": "namariafaustabs@hotmail.com",
       "telefoneCliente": "+55 (11) 94816-8938",
-      "passeioTuristico": 3,
+      "passeioId": 3,
       "data": "2027-07-08T03:00:00.000Z"
     },
     {
@@ -278,7 +278,7 @@
       "nomeCliente": "Thiago Galvão Ferreira",
       "emailCliente": "thiagoferreira@gmail.com",
       "telefoneCliente": "+55 (11) 95920-1058",
-      "passeioTuristico": 4,
+      "passeioId": 4,
       "data": "2026-11-06T03:00:00.000Z"
     },
     {
@@ -286,7 +286,7 @@
       "nomeCliente": "Randu José Costa Aquino Ribeiro",
       "emailCliente": "randuribeiro@hotmail.com",
       "telefoneCliente": "+55 (11) 96716-1389",
-      "passeioTuristico": 4,
+      "passeioId": 4,
       "data": "2027-01-15T03:00:00.000Z"
     }
   ]
