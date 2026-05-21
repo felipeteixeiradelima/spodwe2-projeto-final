@@ -1,0 +1,293 @@
+{
+  "passeios": [
+    {
+      "id": 1,
+      "nome": "Tour guiado pelo centro da cidade de São Paulo",
+      "descricao": "Esse tour acompanhado por guia profissional te acompanha pelo centro da famosa cidade de São Paulo, passando por grandes marcos como a Catedral da Sé no marco zero da cidade, o Pateo do Collegio onde a cidade foi fundada, o Mosteiro de São Bento, o Theatro Municipal, a Avenida Paulista e muito mais!",
+      "local": "São Paulo, São Paulo - Brasil",
+      "preco": 250,
+      "duracao": 6,
+      "horarioInicio": "1899-12-30T13:06:28.000Z",
+      "nota": 4.6
+    },
+    {
+      "id": 2,
+      "nome": "Passeio histórico com guia por Ouro Preto",
+      "descricao": "Nesse passeio guiado pela cidade de Ouro Preto, marcada por sua história rica e grande influência do ciclo do ouro, você irá desfrutar de grandes atrações como o Museu da Inconfidência na Praça Tiradentes, a Igreja de São Francisco de Assis e a Mina do Chico Rei, além de um almoço tudo-incluso no encantador Bené da Flauta Restaurante e Café.",
+      "local": "Ouro Preto, Minas Gerais - Brasil",
+      "preco": 300,
+      "duracao": 8,
+      "horarioInicio": "1899-12-30T11:06:28.000Z",
+      "nota": 4.7
+    },
+    {
+      "id": 3,
+      "nome": "Cristo Redentor e Pão de Açúcar em Um Dia",
+      "descricao": "Aproveite um dia inesquecível no Rio de Janeiro visitando as duas maiores atrações da cidade. Começaremos com uma subida ao Corcovado para admirar o Cristo Redentor e, à tarde, pegaremos o bondinho para o Pão de Açúcar, com tempo para relaxar na Praia de Copacabana.",
+      "local": "Rio de Janeiro, Rio de Janeiro - Brasil",
+      "preco": 450,
+      "duracao": 8,
+      "horarioInicio": "1899-12-30T11:36:28.000Z",
+      "nota": 4.9
+    },
+    {
+      "id": 4,
+
+      "nome": "Roteiro Histórico do Pelourinho e Elevador Lacerda",
+      "descricao": "Mergulhe na rica cultura baiana com este passeio a pé pelo Pelourinho, o centro histórico de Salvador. Visitaremos a Igreja e Convento de São Francisco, conhecida por seu interior banhado a ouro, e finalizaremos com a vista espetacular do Elevador Lacerda e do Mercado Modelo.",
+      "local": "Salvador, Bahia - Brasil",
+      "preco": 180,
+      "duracao": 5,
+      "horarioInicio": "1899-12-30T12:06:28.000Z",
+      "nota": 4.8
+    }
+  ],
+  "pontos": [
+    {
+      "id": 1,
+      "nome": "Catedral da Sé",
+      "tipo": "Catedral",
+      "descricao": "Catedral Metropolitana Nossa Senhora da Assunção e São Paulo, informalmente conhecida como Catedral da Sé, é o principal templo católico da cidade de São Paulo. Localiza-se na Praça da Sé, na Zona Central do município.",
+      "cidade": "São Paulo, São Paulo - Brasil",
+      "diasFuncionamento": "Todos os dias",
+      "horarioDeFuncionamento": "09:00 - 17:00",
+      "preco": 0,
+      "nota": 4.6,
+      "site": "https://catedraldasesp.com/"
+    },
+    {
+      "id": 2,
+      "nome": "Museu Anchieta (Pateo do Collegio)",
+      "tipo": "Museu",
+      "descricao": "O Pateo do Collegio é uma obra apostólica da Companhia de Jesus que promove atividades histórico-culturais e religiosas. Este lugar, berço e símbolo da cidade de São Paulo, resgata a história das origens de uma das maiores cidades do mundo e figura hoje, no coração desta cidade, como um verdadeiro oásis repleto de charme, beleza mais de 470 anos de história!",
+      "cidade": "São Paulo, São Paulo - Brasil",
+      "diasFuncionamento": "Terça-feira a Sábado",
+      "horarioDeFuncionamento": "09:00 - 16:45",
+      "preco": 26,
+      "nota": 4.1,
+      "site": "https://www.pateodocollegio.com.br/museu-anchieta"
+    },
+    {
+      "id": 3,
+      "nome": "Mosteiro de São Bento",
+      "tipo": "Igreja",
+      "descricao": "O Mosteiro de São Bento faz parte do roteiro histórico da cidade de São Paulo. Fundado pelo monge chamado Mauro Teixeira em 1598, hoje o complexo abriga a Basílica Abacial de Nossa Senhora da Assunção, o Mosteiro e o Colégio e Faculdade de São Bento.",
+      "cidade": "São Paulo, São Paulo - Brasil",
+      "diasFuncionamento": "Todos os dias",
+      "horarioDeFuncionamento": "07:00 - 18:00 (horários podem variar)",
+      "preco": 0,
+      "nota": 4.8,
+      "site": "https://www.mosteirodesaobentosp.com.br/"
+    },
+    {
+      "id": 4,
+      "nome": "Avenida Paulista",
+      "tipo": "Avenida",
+      "descricao": "A Avenida Paulista é o principal coração financeiro e cultural de São Paulo. Com quase 3 km de extensão, concentra museus, parques e intensa vida urbana.  Localiza-se no limite entre as zonas centro-sul, central e oeste, numa das regiões mais elevadas da cidade, denominada Espigão da Paulista.",
+      "cidade": "São Paulo, São Paulo - Brasil",
+      "diasFuncionamento": "Todos os dias",
+      "horarioDeFuncionamento": "Aberto o tempo todo",
+      "preco": 0,
+      "nota": 4.6,
+      "site": ""
+    },
+    {
+      "id": 5,
+      "nome": "Museu da Inconfidência",
+      "tipo": "Museu",
+      "descricao": "O Museu da Inconfidência ocupa a antiga Casa de Câmara e Cadeia de Vila Rica e mais quatro prédios auxiliares na cidade de Ouro Preto. Localizado na Praça de Tiradentes, o museu é dedicado à preservação da memória da Inconfidência Mineira e também oferece um rico painel da sociedade e cultura mineiras no período do ciclo do ouro e dos diamantes no século XVIII, incluindo obras de Manuel da Costa Ataíde e Aleijadinho",
+      "cidade": "Ouro Preto, Minas Gerais - Brasil",
+      "diasFuncionamento": "Terça-feira a Sábado",
+      "horarioDeFuncionamento": "10:00 - 20:00 (horários podem variar)",
+      "preco": 0,
+      "nota": 4.9,
+      "site": "https://museudainconfidencia.museus.gov.br/"
+    },
+    {
+      "id": 6,
+      "nome": "Praça Tiradentes",
+      "tipo": "Praça",
+      "descricao": "Localizada na cidade de Ouro Preto, foi onde a cabeça de Joaquim José da Silva Xavier, ou Tiradentes, foi exposta No local onde estivera o poste se encontra hoje um monumento ao mártir da Inconfidência Mineira. Curiosamente, a estátua de bronze está de costas para a residência oficial do governador.",
+      "cidade": "Ouro Preto, Minas Gerais - Brasil",
+      "diasFuncionamento": "Todos os dias",
+      "horarioDeFuncionamento": "Aberto o tempo todo",
+      "preco": 0,
+      "nota": 4.8,
+      "site": "https://www.ouropreto.mg.gov.br/turismo/atrativo-item/1364"
+    },
+    {
+      "id": 7,
+      "nome": "Igreja de São Francisco de Assis",
+      "tipo": "Igreja",
+      "descricao": "Elaborada por Aleijadinho e com trabalhos de Mestre Ataíde, a Igreja de São Francisco de Assis é uma igreja católica de Ouro Preto, marcada por seu estilo Barroco e elementos decorativos do Rococó. Foi erguida pela Ordem Terceira de São Francisco de Assis e inaugurada em 1771.",
+      "cidade": "Ouro Preto, Minas Gerais - Brasil",
+      "diasFuncionamento": "Terça-feira a Sábado",
+      "horarioDeFuncionamento": "08:30 - 17:00",
+      "preco": 10,
+      "nota": 4.7,
+      "site": "https://www.ouropreto.mg.gov.br/turismo/atrativo-item/585"
+    },
+    {
+      "id": 8,
+      "nome": "Mina do Chico Rei",
+      "tipo": "Mina",
+      "descricao": "A Mina do Chico Rei é um ponto turístico histórico em Ouro Preto conhecido como uma antiga mina de ouro do século XVIII que teria sido comprada por um rei africano escravizado. A mina simboliza resistência e a história de Chico Rei, que comprou sua alforria e de compatriotas com ouro escondido",
+      "cidade": "Ouro Preto, Minas Gerais - Brasil",
+      "diasFuncionamento": "Todos os dias",
+      "horarioDeFuncionamento": "08:00 - 17:00",
+      "preco": 70,
+      "nota": 4.5,
+      "site": "https://www.ouropreto.mg.gov.br/turismo/atrativo-item/568"
+    },
+    {
+      "id": 9,
+      "nome": "Cristo Redentor",
+      "tipo": "Monumento",
+      "descricao": "Estátua art déco de Jesus Cristo no Rio de Janeiro, localizada no topo do morro do Corcovado. É um dos principais símbolos do Brasil e uma das Novas Sete Maravilhas do Mundo.",
+      "cidade": "Rio de Janeiro, Rio de Janeiro - Brasil",
+      "diasFuncionamento": "Todos os dias",
+      "horarioDeFuncionamento": "08:00 - 19:00",
+      "preco": 94,
+      "nota": 4.9,
+      "site": "https://santuariocristoredentor.com.br/"
+    },
+    {
+      "id": 10,
+      "nome": "Pão de Açúcar",
+      "tipo": "Mirante",
+      "descricao": "Complexo de morros e teleférico (Bondinho) que oferece uma vista panorâmica deslumbrante da Baía de Guanabara, praias e cidade do Rio de Janeiro.",
+      "cidade": "Rio de Janeiro, Rio de Janeiro - Brasil",
+      "diasFuncionamento": "Todos os dias",
+      "horarioDeFuncionamento": "08:30 - 20:00",
+      "preco": 160,
+      "nota": 4.8,
+      "site": "https://bondinho.com.br/"
+    },
+    {
+      "id": 11,
+      "nome": "Praia de Copacabana",
+      "tipo": "Praia",
+      "descricao": "Uma das praias mais famosas do mundo, conhecida por seu calçadão com desenho de ondas e areia clara, ideal para banhos e esportes ao ar livre.",
+      "cidade": "Rio de Janeiro, Rio de Janeiro - Brasil",
+      "diasFuncionamento": "Todos os dias",
+      "horarioDeFuncionamento": "Aberto o tempo todo",
+      "preco": 0,
+      "nota": 4.7,
+      "site": "https://www.metrorio.com.br/NavegueRio/PontosTuristicosInterna?p_ponto=29"
+    },
+    {
+      "id": 12,
+      "nome": "Pelourinho",
+      "tipo": "Bairro Histórico",
+      "descricao": "Bairro histórico no coração de Salvador, conhecido por sua arquitetura colonial portuguesa bem preservada, ruas de paralelepípedos e forte herança cultural afro-brasileira.",
+      "cidade": "Salvador, Bahia - Brasil",
+      "diasFuncionamento": "Todos os dias",
+      "horarioDeFuncionamento": "Aberto o tempo todo",
+      "preco": 0,
+      "nota": 4.7,
+      "site": ""
+    },
+    {
+      "id": 13,
+      "nome": "Igreja e Convento de São Francisco",
+      "tipo": "Igreja",
+      "descricao": "Importante construção colonial em Salvador, famosa por seu rico interior barroco decorado com uma impressionante quantidade de ouro e azulejos portugueses.",
+      "cidade": "Salvador, Bahia - Brasil",
+      "diasFuncionamento": "Todos os dias",
+      "horarioDeFuncionamento": "09:00 - 17:30 (horários podem variar)",
+      "preco": 10,
+      "nota": 4.8,
+      "site": "https://www.salvadordabahia.com/experiencias/igreja-e-convento-de-sao-francisco/"
+    },
+    {
+      "id": 14,
+      "nome": "Elevador Lacerda",
+      "tipo": "Monumento",
+      "descricao": "O primeiro elevador urbano do mundo, conecta a Cidade Baixa à Cidade Alta de Salvador, oferecendo uma vista incrível da Baía de Todos-os-Santos.",
+      "cidade": "Salvador, Bahia - Brasil",
+      "diasFuncionamento": "Todos os dias",
+      "horarioDeFuncionamento": "07:00 - 22:00",
+      "preco": 0.15,
+      "nota": 4.6,
+      "site": "https://mobilidade.salvador.ba.gov.br/elevador-lacerda/"
+    },
+    {
+      "id": 15,
+      "nome": "Mercado Modelo",
+      "tipo": "Mercado",
+      "descricao": "Tradicional mercado de artesanato situado na Cidade Baixa de Salvador, abrigando centenas de lojas com produtos locais, comidas típicas e lembranças baianas.",
+      "cidade": "Salvador, Bahia - Brasil",
+      "diasFuncionamento": "Segunda-feira a Sábado",
+      "horarioDeFuncionamento": "09:00 - 18:00",
+      "preco": 0,
+      "nota": 4.5,
+      "site": "http://www.mercadomodelosalvador.com/"
+    }
+  ],
+  "reservas": [
+    {
+      "id": 1,
+      "nomeCliente": "Felipe Teixeira de Lima",
+      "emailCliente": "felipeteixeiradelima@gmail.com",
+      "telefoneCliente": "+55 (11) 94285-2902",
+      "passeioId": 1,
+      "data": "2026-07-05T03:00:00.000Z"
+    },
+    {
+      "id": 2,
+      "nomeCliente": "Rafael Teixeira Paulino",
+      "emailCliente": "rafaelpaulino@hotmail.com",
+      "telefoneCliente": "+55 (11) 92759-0285",
+      "passeioId": 1,
+      "data": "2026-09-11T03:00:00.000Z"
+    },
+    {
+      "id": 3,
+      "nomeCliente": "Amanda Jen",
+      "emailCliente": "jen.amanda@outlook.com",
+      "telefoneCliente": "+55 (11) 98624-2504",
+      "passeioId": 2,
+      "data": "2026-07-22T03:00:00.000Z"
+    },
+    {
+      "id": 4,
+      "nomeCliente": "Leticia Cardoso Furtado",
+      "emailCliente": "furtadolet@gmail.com",
+      "telefoneCliente": "+55 (11) 90192-1952",
+      "passeioId": 2,
+      "data": "2026-12-15T03:00:00.000Z"
+    },
+    {
+      "id": 5,
+      "nomeCliente": "Vinícius Thiago de Santana",
+      "emailCliente": "santanavinithiago@outlook.com",
+      "telefoneCliente": "+55 (11) 97489-0384",
+      "passeioId": 3,
+      "data": "2026-09-07T03:00:00.000Z"
+    },
+    {
+      "id": 6,
+      "nomeCliente": "Ana Maria Fausta Bonfim Santos",
+      "emailCliente": "namariafaustabs@hotmail.com",
+      "telefoneCliente": "+55 (11) 94816-8938",
+      "passeioId": 3,
+      "data": "2027-07-08T03:00:00.000Z"
+    },
+    {
+      "id": 7,
+      "nomeCliente": "Thiago Galvão Ferreira",
+      "emailCliente": "thiagoferreira@gmail.com",
+      "telefoneCliente": "+55 (11) 95920-1058",
+      "passeioId": 4,
+      "data": "2026-11-06T03:00:00.000Z"
+    },
+    {
+      "id": 8,
+      "nomeCliente": "Randu José Costa Aquino Ribeiro",
+      "emailCliente": "randuribeiro@hotmail.com",
+      "telefoneCliente": "+55 (11) 96716-1389",
+      "passeioId": 4,
+      "data": "2027-01-15T03:00:00.000Z"
+    }
+  ]
+}
