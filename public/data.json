@@ -8,7 +8,8 @@
       "preco": 250,
       "duracao": 6,
       "horarioInicio": "1899-12-30T13:06:28.000Z",
-      "nota": 4.6
+      "nota": 4.6,
+      "imagem": "./images/passeios/sao-paulo.png"
     },
     {
       "id": 2,
@@ -18,7 +19,8 @@
       "preco": 300,
       "duracao": 8,
       "horarioInicio": "1899-12-30T11:06:28.000Z",
-      "nota": 4.7
+      "nota": 4.7,
+      "imagem": "./images/passeios/ouro-preto.jpg"
     },
     {
       "id": 3,
@@ -28,7 +30,8 @@
       "preco": 450,
       "duracao": 8,
       "horarioInicio": "1899-12-30T11:36:28.000Z",
-      "nota": 4.9
+      "nota": 4.9,
+      "imagem": "./images/passeios/rio-de-janeiro.jpg"
     },
     {
       "id": 4,
@@ -39,7 +42,8 @@
       "preco": 180,
       "duracao": 5,
       "horarioInicio": "1899-12-30T12:06:28.000Z",
-      "nota": 4.8
+      "nota": 4.8,
+      "imagem": "./images/passeios/salvador.jpg"
     }
   ],
   "pontos": [
@@ -53,7 +57,8 @@
       "horarioDeFuncionamento": "09:00 - 17:00",
       "preco": 0,
       "nota": 4.6,
-      "site": "https://catedraldasesp.com/"
+      "site": "https://catedraldasesp.com/",
+      "imagem": "./images/pontos/catedral-da-se.png"
     },
     {
       "id": 2,
@@ -65,7 +70,8 @@
       "horarioDeFuncionamento": "09:00 - 16:45",
       "preco": 26,
       "nota": 4.1,
-      "site": "https://www.pateodocollegio.com.br/museu-anchieta"
+      "site": "https://www.pateodocollegio.com.br/museu-anchieta",
+      "imagem": "./images/pontos/museu-do-anchieta.jpg"
     },
     {
       "id": 3,
@@ -77,7 +83,8 @@
       "horarioDeFuncionamento": "07:00 - 18:00 (horários podem variar)",
       "preco": 0,
       "nota": 4.8,
-      "site": "https://www.mosteirodesaobentosp.com.br/"
+      "site": "https://www.mosteirodesaobentosp.com.br/",
+      "imagem": "./images/pontos/mosteiro-de-sao-bento.jpg"
     },
     {
       "id": 4,
@@ -89,7 +96,8 @@
       "horarioDeFuncionamento": "Aberto o tempo todo",
       "preco": 0,
       "nota": 4.6,
-      "site": ""
+      "site": "",
+      "imagem": "./images/pontos/avenida-paulista.jpg"
     },
     {
       "id": 5,
@@ -101,7 +109,8 @@
       "horarioDeFuncionamento": "10:00 - 20:00 (horários podem variar)",
       "preco": 0,
       "nota": 4.9,
-      "site": "https://museudainconfidencia.museus.gov.br/"
+      "site": "https://museudainconfidencia.museus.gov.br/",
+      "imagem": "./images/pontos/museu-da-inconfidencia.jpg"
     },
     {
       "id": 6,
@@ -113,7 +122,8 @@
       "horarioDeFuncionamento": "Aberto o tempo todo",
       "preco": 0,
       "nota": 4.8,
-      "site": "https://www.ouropreto.mg.gov.br/turismo/atrativo-item/1364"
+      "site": "https://www.ouropreto.mg.gov.br/turismo/atrativo-item/1364",
+      "imagem": "./images/pontos/praca-tiradentes.jpg"
     },
     {
       "id": 7,
@@ -125,7 +135,8 @@
       "horarioDeFuncionamento": "08:30 - 17:00",
       "preco": 10,
       "nota": 4.7,
-      "site": "https://www.ouropreto.mg.gov.br/turismo/atrativo-item/585"
+      "site": "https://www.ouropreto.mg.gov.br/turismo/atrativo-item/585",
+      "imagem": "./images/pontos/igreja-sao-francisco-ouro-preto.jpg"
     },
     {
       "id": 8,
@@ -137,7 +148,8 @@
       "horarioDeFuncionamento": "08:00 - 17:00",
       "preco": 70,
       "nota": 4.5,
-      "site": "https://www.ouropreto.mg.gov.br/turismo/atrativo-item/568"
+      "site": "https://www.ouropreto.mg.gov.br/turismo/atrativo-item/568",
+      "imagem": "./images/pontos/mina-do-chico-rei.jpg"
     },
     {
       "id": 9,
@@ -149,7 +161,8 @@
       "horarioDeFuncionamento": "08:00 - 19:00",
       "preco": 94,
       "nota": 4.9,
-      "site": "https://santuariocristoredentor.com.br/"
+      "site": "https://santuariocristoredentor.com.br/",
+      "imagem": "./images/pontos/cristo-redentor.jpg"
     },
     {
       "id": 10,
@@ -161,7 +174,8 @@
       "horarioDeFuncionamento": "08:30 - 20:00",
       "preco": 160,
       "nota": 4.8,
-      "site": "https://bondinho.com.br/"
+      "site": "https://bondinho.com.br/",
+      "imagem": "./images/pontos/pao-de-acucar.jpg"
     },
     {
       "id": 11,
@@ -173,7 +187,8 @@
       "horarioDeFuncionamento": "Aberto o tempo todo",
       "preco": 0,
       "nota": 4.7,
-      "site": "https://www.metrorio.com.br/NavegueRio/PontosTuristicosInterna?p_ponto=29"
+      "site": "https://www.metrorio.com.br/NavegueRio/PontosTuristicosInterna?p_ponto=29",
+      "imagem": "./images/pontos/copacabana.png"
     },
     {
       "id": 12,
@@ -185,7 +200,8 @@
       "horarioDeFuncionamento": "Aberto o tempo todo",
       "preco": 0,
       "nota": 4.7,
-      "site": ""
+      "site": "",
+      "imagem": "./images/pontos/pelourinho.jpg"
     },
     {
       "id": 13,
@@ -197,7 +213,8 @@
       "horarioDeFuncionamento": "09:00 - 17:30 (horários podem variar)",
       "preco": 10,
       "nota": 4.8,
-      "site": "https://www.salvadordabahia.com/experiencias/igreja-e-convento-de-sao-francisco/"
+      "site": "https://www.salvadordabahia.com/experiencias/igreja-e-convento-de-sao-francisco/",
+      "imagem": "./images/pontos/igreja-sao-francisco-salvador.jpg"
     },
     {
       "id": 14,
@@ -209,7 +226,8 @@
       "horarioDeFuncionamento": "07:00 - 22:00",
       "preco": 0.15,
       "nota": 4.6,
-      "site": "https://mobilidade.salvador.ba.gov.br/elevador-lacerda/"
+      "site": "https://mobilidade.salvador.ba.gov.br/elevador-lacerda/",
+      "imagem": "./images/pontos/elevador-lacerda.jpg"
     },
     {
       "id": 15,
@@ -221,7 +239,8 @@
       "horarioDeFuncionamento": "09:00 - 18:00",
       "preco": 0,
       "nota": 4.5,
-      "site": "http://www.mercadomodelosalvador.com/"
+      "site": "http://www.mercadomodelosalvador.com/",
+      "imagem": "./images/pontos/mercado-modelo.jpg"
     }
   ],
   "reservas": [
