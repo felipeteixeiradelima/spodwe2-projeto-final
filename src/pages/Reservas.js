@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from "react";
+import formatarDataISO from "../utils";
 
 function Reservas() {
   const [reservas, setReservas] = useState([]);
   const [form, setForm] = useState({
     id: "",
     nomeCliente: "",
-    email: "",
-    telefone: "",
+    emailCliente: "",
+    telefoneCliente: "",
     passeioId: "",
     data: "",
   });
@@ -17,6 +18,10 @@ function Reservas() {
     fetch("/data.json")
       .then((resposta) => resposta.json())
       .then((dados) => {
+        dados.reservas.map((reserva) => {
+          reserva.data = formatarDataISO(Date.parse(reserva.data));
+          return reserva;
+        });
         setReservas(dados.reservas);
         setCarregando(false);
       });
@@ -33,15 +38,14 @@ function Reservas() {
       setReservas(reservas.map((r) => (r.id === form.id ? form : r)));
       setEditando(false);
     } else {
-      const novoId =
-        reservas.length > 0 ? Math.max(...reservas.map((r) => r.id)) + 1 : 1;
+      const novoId = reservas.length > 0 ? Math.max(...reservas.map((r) => r.id)) + 1 : 1;
       setReservas([...reservas, { ...form, id: novoId }]);
     }
     setForm({
       id: "",
       nomeCliente: "",
-      email: "",
-      telefone: "",
+      emailCliente: "",
+      telefoneCliente: "",
       passeioId: "",
       data: "",
     });
@@ -75,18 +79,18 @@ function Reservas() {
           required
         />
         <input
-          type="email"
-          name="email"
-          placeholder="E-mail"
-          value={form.email}
+          type="emailCliente"
+          name="emailCliente"
+          placeholder="E-mail do Cliente"
+          value={form.emailCliente}
           onChange={handleChange}
           required
         />
         <input
           type="text"
-          name="telefone"
-          placeholder="Telefone"
-          value={form.telefone}
+          name="telefoneCliente"
+          placeholder="Telefone do Cliente"
+          value={form.telefoneCliente}
           onChange={handleChange}
           required
         />
@@ -98,13 +102,7 @@ function Reservas() {
           onChange={handleChange}
           required
         />
-        <input
-          type="date"
-          name="data"
-          value={form.data}
-          onChange={handleChange}
-          required
-        />
+        <input type="date" name="data" value={form.data} onChange={handleChange} required />
         <button type="submit">{editando ? "Atualizar" : "Adicionar"}</button>
         {editando && (
           <button
@@ -115,8 +113,8 @@ function Reservas() {
               setForm({
                 id: "",
                 nomeCliente: "",
-                email: "",
-                telefone: "",
+                emailCliente: "",
+                telefoneCliente: "",
                 passeioId: "",
                 data: "",
               });
@@ -133,7 +131,7 @@ function Reservas() {
             <th>ID da Reserva</th>
             <th>Cliente</th>
             <th>E-mail</th>
-            <th>Telefone</th>
+            <th>TelefoneCliente</th>
             <th>ID Passeio</th>
             <th>Data</th>
             <th>Ações</th>
@@ -144,21 +142,15 @@ function Reservas() {
             <tr key={reserva.id}>
               <td>{reserva.id}</td>
               <td>{reserva.nomeCliente}</td>
-              <td>{reserva.email}</td>
-              <td>{reserva.telefone}</td>
+              <td>{reserva.emailCliente}</td>
+              <td>{reserva.telefoneCliente}</td>
               <td>{reserva.passeioId}</td>
               <td>{reserva.data}</td>
               <td>
-                <button
-                  className="btn-editar"
-                  onClick={() => editarReserva(reserva)}
-                >
+                <button className="btn-editar" onClick={() => editarReserva(reserva)}>
                   Editar
                 </button>
-                <button
-                  className="btn-excluir"
-                  onClick={() => excluirReserva(reserva.id)}
-                >
+                <button className="btn-excluir" onClick={() => excluirReserva(reserva.id)}>
                   Excluir
                 </button>
               </td>

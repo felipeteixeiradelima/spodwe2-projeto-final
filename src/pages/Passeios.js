@@ -17,6 +17,10 @@ function Passeios() {
     fetch("/data.json")
       .then((resposta) => resposta.json())
       .then((dados) => {
+        dados.passeios.map((passeios) => {
+          passeios.preco = `R$ ${passeios.preco.toFixed(2).replace(".", ",")}`;
+          return passeios;
+        });
         setPasseios(dados.passeios);
         setCarregando(false);
       })

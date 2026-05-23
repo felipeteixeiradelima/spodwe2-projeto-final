@@ -7,7 +7,7 @@ function PontosTuristicos() {
     nome: "",
     tipo: "",
     cidade: "",
-    precoPorPessoa: "",
+    preco: "",
   });
   const [editando, setEditando] = useState(false);
   const [carregando, setCarregando] = useState(true);
@@ -16,6 +16,10 @@ function PontosTuristicos() {
     fetch("/data.json")
       .then((resposta) => resposta.json())
       .then((dados) => {
+        dados.pontos.map((ponto) => {
+          ponto.preco = `R$ ${ponto.preco.toFixed(2).replace(".", ",")}`;
+          return ponto;
+        });
         setPontos(dados.pontos);
         setCarregando(false);
       });
@@ -32,11 +36,10 @@ function PontosTuristicos() {
       setPontos(pontos.map((p) => (p.id === form.id ? form : p)));
       setEditando(false);
     } else {
-      const novoId =
-        pontos.length > 0 ? Math.max(...pontos.map((p) => p.id)) + 1 : 1;
+      const novoId = pontos.length > 0 ? Math.max(...pontos.map((p) => p.id)) + 1 : 1;
       setPontos([...pontos, { ...form, id: novoId }]);
     }
-    setForm({ id: "", nome: "", tipo: "", cidade: "", precoPorPessoa: "" });
+    setForm({ id: "", nome: "", tipo: "", cidade: "", preco: "" });
   };
 
   const editarPonto = (ponto) => {
@@ -45,9 +48,7 @@ function PontosTuristicos() {
   };
 
   const excluirPonto = (id) => {
-    if (
-      window.confirm("Tem certeza que deseja excluir este ponto turístico?")
-    ) {
+    if (window.confirm("Tem certeza que deseja excluir este ponto turístico?")) {
       setPontos(pontos.filter((p) => p.id !== id));
     }
   };
@@ -86,9 +87,9 @@ function PontosTuristicos() {
         />
         <input
           type="number"
-          name="precoPorPessoa"
+          name="preco"
           placeholder="Preço (R$)"
-          value={form.precoPorPessoa}
+          value={form.preco}
           onChange={handleChange}
           required
         />
@@ -104,7 +105,7 @@ function PontosTuristicos() {
                 nome: "",
                 tipo: "",
                 cidade: "",
-                precoPorPessoa: "",
+                preco: "",
               });
             }}
           >
@@ -131,18 +132,12 @@ function PontosTuristicos() {
               <td>{ponto.nome}</td>
               <td>{ponto.tipo}</td>
               <td>{ponto.cidade}</td>
-              <td>{ponto.precoPorPessoa}</td>
+              <td>{ponto.preco}</td>
               <td>
-                <button
-                  className="btn-editar"
-                  onClick={() => editarPonto(ponto)}
-                >
+                <button className="btn-editar" onClick={() => editarPonto(ponto)}>
                   Editar
                 </button>
-                <button
-                  className="btn-excluir"
-                  onClick={() => excluirPonto(ponto.id)}
-                >
+                <button className="btn-excluir" onClick={() => excluirPonto(ponto.id)}>
                   Excluir
                 </button>
               </td>
