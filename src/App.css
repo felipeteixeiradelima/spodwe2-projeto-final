@@ -155,20 +155,25 @@ button:hover {
 
 .btn-editar {
   background-color: var(--accent-cyan);
+  margin: 5px;
   padding: 8px 12px;
   font-size: 0.9rem;
+  width: 80%;
+  box-sizing: border-box;
 }
 
 .btn-editar:hover {
-  background-color: #0288d1;
+  background-color: #0288D1;
 }
 
 .btn-excluir {
-  background-color: #e53935; /* Mantemos vermelho para ação de exclusão */
+  background-color: #E53935;
   color: white;
-  margin-left: 10px;
+  margin: 5px;
   padding: 8px 12px;
   font-size: 0.9rem;
+  width: 80%;
+  box-sizing: border-box;
 }
 
 .btn-excluir:hover {
@@ -181,8 +186,8 @@ button:hover {
   margin-left: 10px;
 }
 
-.btn-cancelar:hover {
-  background-color: #90a4ae;
+.btn-excluir:hover {
+  background-color: #C62828;
 }
 
 /* =========================================

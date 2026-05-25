@@ -8,13 +8,14 @@ function Passeios() {
     local: "",
     preco: "",
     duracao: "",
+    horarioInicio: "",
+    nota: "",
   });
   const [editando, setEditando] = useState(false);
   const [carregando, setCarregando] = useState(true);
 
-  // Carregamento dinâmico do JSON
   useEffect(() => {
-    fetch("/data.json")
+    fetch("/dados.json")
       .then((resposta) => resposta.json())
       .then((dados) => {
         dados.passeios.map((passeios) => {
@@ -24,8 +25,10 @@ function Passeios() {
         setPasseios(dados.passeios);
         setCarregando(false);
       })
-      .catch((erro) => console.error("Erro ao carregar dados:", erro));
-  }, []); // O array vazio garante que o fetch ocorra apenas uma vez
+      .catch((erro) =>
+        console.error("Erro ao carregar dados dos passeios:", erro)
+      );
+  }, []);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -42,7 +45,15 @@ function Passeios() {
         passeios.length > 0 ? Math.max(...passeios.map((p) => p.id)) + 1 : 1;
       setPasseios([...passeios, { ...form, id: novoId }]);
     }
-    setForm({ id: "", nome: "", local: "", preco: "", duracao: "" });
+    setForm({
+      id: "",
+      nome: "",
+      local: "",
+      preco: "",
+      duracao: "",
+      horarioInicio: "",
+      nota: "",
+    });
   };
 
   const editarPasseio = (passeio) => {
@@ -75,7 +86,7 @@ function Passeios() {
         <input
           type="text"
           name="local"
-          placeholder="Local"
+          placeholder="Localização"
           value={form.local}
           onChange={handleChange}
           required
@@ -83,8 +94,9 @@ function Passeios() {
         <input
           type="number"
           name="preco"
-          placeholder="Preço"
+          placeholder="Preço por Pessoa (R$)"
           value={form.preco}
+          min="0"
           onChange={handleChange}
           required
         />
@@ -96,6 +108,28 @@ function Passeios() {
           onChange={handleChange}
           required
         />
+        <input
+          type="text"
+          name="horarioInicio"
+          placeholder="Início (ex: 09:00)"
+          value={form.horarioInicio}
+          onChange={handleChange}
+          pattern="^([01]?[0-9]|2[0-3]):[0-5][0-9]$"
+          maxLength="5"
+          required
+        />
+        <input
+          type="number"
+          step="0.1"
+          min="0"
+          max="5"
+          name="nota"
+          placeholder="Nota de Avaliação"
+          value={form.nota}
+          onChange={handleChange}
+          required
+        />
+        <br />
         <button type="submit">{editando ? "Atualizar" : "Adicionar"}</button>
         {editando && (
           <button
@@ -103,7 +137,15 @@ function Passeios() {
             className="btn-cancelar"
             onClick={() => {
               setEditando(false);
-              setForm({ id: "", nome: "", local: "", preco: "", duracao: "" });
+              setForm({
+                id: "",
+                nome: "",
+                local: "",
+                preco: "",
+                duracao: "",
+                horarioInicio: "",
+                nota: "",
+              });
             }}
           >
             Cancelar
@@ -112,13 +154,15 @@ function Passeios() {
       </form>
 
       <table className="crud-table">
-        <thead className="thead-passeios">
+        <thead>
           <tr>
             <th>ID</th>
             <th>Nome</th>
             <th>Local</th>
             <th>Preço (R$)</th>
             <th>Duração (h)</th>
+            <th>Início</th>
+            <th>Nota</th>
             <th>Ações</th>
           </tr>
         </thead>
@@ -128,9 +172,11 @@ function Passeios() {
               <td>{passeio.id}</td>
               <td>{passeio.nome}</td>
               <td>{passeio.local}</td>
-              <td>{passeio.preco}</td>
-              <td>{passeio.duracao}</td>
-              <td>
+              <td style={{ minWidth: "90px" }}>{passeio.preco}</td>
+              <td style={{ minWidth: "100px" }}>{passeio.duracao}</td>
+              <td>{passeio.horarioInicio}</td>
+              <td style={{ minWidth: "50px" }}>⭐ {passeio.nota}</td>
+              <td style={{ maxWidth: "110px" }}>
                 <button
                   className="btn-editar"
                   onClick={() => editarPasseio(passeio)}

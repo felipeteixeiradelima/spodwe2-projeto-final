@@ -15,11 +15,11 @@ function Reservas() {
   const [carregando, setCarregando] = useState(true);
 
   useEffect(() => {
-    fetch("/data.json")
+    fetch("/dados.json")
       .then((resposta) => resposta.json())
       .then((dados) => {
         dados.reservas.map((reserva) => {
-          reserva.data = formatarDataISO(Date.parse(reserva.data));
+          reserva.data = formatarDataISO(Date.parse(reserva.data), true);
           return reserva;
         });
         setReservas(dados.reservas);
@@ -38,7 +38,8 @@ function Reservas() {
       setReservas(reservas.map((r) => (r.id === form.id ? form : r)));
       setEditando(false);
     } else {
-      const novoId = reservas.length > 0 ? Math.max(...reservas.map((r) => r.id)) + 1 : 1;
+      const novoId =
+        reservas.length > 0 ? Math.max(...reservas.map((r) => r.id)) + 1 : 1;
       setReservas([...reservas, { ...form, id: novoId }]);
     }
     setForm({
@@ -102,7 +103,13 @@ function Reservas() {
           onChange={handleChange}
           required
         />
-        <input type="date" name="data" value={form.data} onChange={handleChange} required />
+        <input
+          type="date"
+          name="data"
+          value={form.data}
+          onChange={handleChange}
+          required
+        />
         <button type="submit">{editando ? "Atualizar" : "Adicionar"}</button>
         {editando && (
           <button
@@ -128,10 +135,10 @@ function Reservas() {
       <table className="crud-table">
         <thead className="thead-reservas">
           <tr>
-            <th>ID da Reserva</th>
+            <th>ID</th>
             <th>Cliente</th>
             <th>E-mail</th>
-            <th>TelefoneCliente</th>
+            <th>Telefone Cliente</th>
             <th>ID Passeio</th>
             <th>Data</th>
             <th>Ações</th>
@@ -146,11 +153,17 @@ function Reservas() {
               <td>{reserva.telefoneCliente}</td>
               <td>{reserva.passeioId}</td>
               <td>{reserva.data}</td>
-              <td>
-                <button className="btn-editar" onClick={() => editarReserva(reserva)}>
+              <td style={{ maxWidth: "100px" }}>
+                <button
+                  className="btn-editar"
+                  onClick={() => editarReserva(reserva)}
+                >
                   Editar
                 </button>
-                <button className="btn-excluir" onClick={() => excluirReserva(reserva.id)}>
+                <button
+                  className="btn-excluir"
+                  onClick={() => excluirReserva(reserva.id)}
+                >
                   Excluir
                 </button>
               </td>

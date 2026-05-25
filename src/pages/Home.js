@@ -7,7 +7,7 @@ function Home() {
   const [carregando, setCarregando] = useState(true);
 
   useEffect(() => {
-    fetch("/data.json")
+    fetch("/dados.json")
       .then((resposta) => resposta.json())
       .then((dados) => {
         // Pega apenas os 3 primeiros registros de cada entidade
@@ -48,8 +48,8 @@ function Home() {
             subtitulo={ponto.tipo}
             texto={ponto.cidade}
             destaque={
-              ponto.precoPorPessoa > 0
-                ? `R$ ${ponto.precoPorPessoa}`
+              ponto.preco > 0
+                ? `R$ ${ponto.preco}`
                 : "Gratuito"
             }
           />

@@ -1,4 +1,4 @@
-function formatarDataISO(isoString) {
+function formatarDataISO(isoString, somenteData) {
   const data = new Date(isoString);
 
   // Função auxiliar para adicionar o zero à esquerda quando o número for menor que 10
@@ -11,6 +11,10 @@ function formatarDataISO(isoString) {
   const horas = pad(data.getHours());
   const minutos = pad(data.getMinutes());
   const segundos = pad(data.getSeconds());
+
+  if (somenteData === true) {
+    return `${dia}/${mes}/${ano}`;
+  }
 
   return `${dia}/${mes}/${ano} ${horas}:${minutos}:${segundos}`;
 }
