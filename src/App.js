@@ -6,6 +6,7 @@ import Passeios from "./pages/Passeios";
 import PontosTuristicos from "./pages/PontosTuristicos";
 import Reservas from "./pages/Reservas";
 import "./App.css";
+import formatarDataISO from "./utils";
 
 function App() {
   // Estados globais da aplicação
@@ -19,6 +20,19 @@ function App() {
     fetch("/dados.json")
       .then((resposta) => resposta.json())
       .then((dados) => {
+        dados.passeios.map((passeios) => {
+          passeios.preco = `R$ ${passeios.preco.toFixed(2).replace(".", ",")}`;
+          return passeios;
+        });
+        dados.pontos.map((pontos) => {
+          pontos.preco =
+            pontos.preco === 0 ? pontos.preco : `R$ ${pontos.preco.toFixed(2).replace(".", ",")}`;
+          return pontos;
+        });
+        dados.reservas.map((reserva) => {
+          reserva.data = formatarDataISO(Date.parse(reserva.data), true);
+          return reserva;
+        });
         setPasseios(dados.passeios);
         setPontos(dados.pontos);
         setReservas(dados.reservas);
