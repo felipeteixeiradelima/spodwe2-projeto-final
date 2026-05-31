@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import formatarDataISO from "../utils";
 
-function Reservas() {
-  const [reservas, setReservas] = useState([]);
+function Reservas({ reservas, setReservas }) {
   const [form, setForm] = useState({
     id: "",
     nomeCliente: "",
@@ -12,20 +11,6 @@ function Reservas() {
     data: "",
   });
   const [editando, setEditando] = useState(false);
-  const [carregando, setCarregando] = useState(true);
-
-  useEffect(() => {
-    fetch("/dados.json")
-      .then((resposta) => resposta.json())
-      .then((dados) => {
-        dados.reservas.map((reserva) => {
-          reserva.data = formatarDataISO(Date.parse(reserva.data), true);
-          return reserva;
-        });
-        setReservas(dados.reservas);
-        setCarregando(false);
-      });
-  }, []);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -38,8 +23,7 @@ function Reservas() {
       setReservas(reservas.map((r) => (r.id === form.id ? form : r)));
       setEditando(false);
     } else {
-      const novoId =
-        reservas.length > 0 ? Math.max(...reservas.map((r) => r.id)) + 1 : 1;
+      const novoId = reservas.length > 0 ? Math.max(...reservas.map((r) => r.id)) + 1 : 1;
       setReservas([...reservas, { ...form, id: novoId }]);
     }
     setForm({
@@ -62,8 +46,6 @@ function Reservas() {
       setReservas(reservas.filter((r) => r.id !== id));
     }
   };
-
-  if (carregando) return <p>Carregando reservas...</p>;
 
   return (
     <div>
@@ -103,13 +85,7 @@ function Reservas() {
           onChange={handleChange}
           required
         />
-        <input
-          type="date"
-          name="data"
-          value={form.data}
-          onChange={handleChange}
-          required
-        />
+        <input type="date" name="data" value={form.data} onChange={handleChange} required />
         <button type="submit">{editando ? "Atualizar" : "Adicionar"}</button>
         {editando && (
           <button
@@ -154,16 +130,10 @@ function Reservas() {
               <td>{reserva.passeioId}</td>
               <td>{reserva.data}</td>
               <td style={{ maxWidth: "100px" }}>
-                <button
-                  className="btn-editar"
-                  onClick={() => editarReserva(reserva)}
-                >
+                <button className="btn-editar" onClick={() => editarReserva(reserva)}>
                   Editar
                 </button>
-                <button
-                  className="btn-excluir"
-                  onClick={() => excluirReserva(reserva.id)}
-                >
+                <button className="btn-excluir" onClick={() => excluirReserva(reserva.id)}>
                   Excluir
                 </button>
               </td>

@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
-function PontosTuristicos() {
-  const [pontos, setPontos] = useState([]);
+function PontosTuristicos({ pontos, setPontos }) {
   const [form, setForm] = useState({
     id: "",
     nome: "",
@@ -13,26 +12,6 @@ function PontosTuristicos() {
     site: "",
   });
   const [editando, setEditando] = useState(false);
-  const [carregando, setCarregando] = useState(true);
-
-  useEffect(() => {
-    fetch("/dados.json")
-      .then((resposta) => resposta.json())
-      .then((dados) => {
-        dados.pontos.map((pontos) => {
-          pontos.preco =
-            pontos.preco === 0
-              ? pontos.preco
-              : `R$ ${pontos.preco.toFixed(2).replace(".", ",")}`;
-          return pontos;
-        });
-        setPontos(dados.pontos);
-        setCarregando(false);
-      })
-      .catch((erro) =>
-        console.error("Erro ao carregar dados dos pontos:", erro)
-      );
-  }, []);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -45,8 +24,7 @@ function PontosTuristicos() {
       setPontos(pontos.map((p) => (p.id === form.id ? form : p)));
       setEditando(false);
     } else {
-      const novoId =
-        pontos.length > 0 ? Math.max(...pontos.map((p) => p.id)) + 1 : 1;
+      const novoId = pontos.length > 0 ? Math.max(...pontos.map((p) => p.id)) + 1 : 1;
       setPontos([...pontos, { ...form, id: novoId }]);
     }
     setForm({
@@ -67,14 +45,10 @@ function PontosTuristicos() {
   };
 
   const excluirPonto = (id) => {
-    if (
-      window.confirm("Tem certeza que deseja excluir este ponto turístico?")
-    ) {
+    if (window.confirm("Tem certeza que deseja excluir este ponto turístico?")) {
       setPontos(pontos.filter((p) => p.id !== id));
     }
   };
-
-  if (carregando) return <p>Carregando pontos turísticos...</p>;
 
   return (
     <div>
@@ -187,11 +161,7 @@ function PontosTuristicos() {
               <td>{ponto.cidade}</td>
               <td>{ponto.diasFuncionamento}</td>
               <td>{ponto.horarioDeFuncionamento}</td>
-              <td>
-                {ponto.preco === 0 || ponto.preco === "0"
-                  ? "Gratuito"
-                  : ponto.preco}
-              </td>
+              <td>{ponto.preco === 0 || ponto.preco === "0" ? "Gratuito" : ponto.preco}</td>
               <td style={{ minWidth: "50px" }}>⭐ {ponto.nota}</td>
               <td>
                 {ponto.site ? (
@@ -208,16 +178,10 @@ function PontosTuristicos() {
                 )}
               </td>
               <td style={{ maxWidth: "125px" }}>
-                <button
-                  className="btn-editar"
-                  onClick={() => editarPonto(ponto)}
-                >
+                <button className="btn-editar" onClick={() => editarPonto(ponto)}>
                   Editar
                 </button>
-                <button
-                  className="btn-excluir"
-                  onClick={() => excluirPonto(ponto.id)}
-                >
+                <button className="btn-excluir" onClick={() => excluirPonto(ponto.id)}>
                   Excluir
                 </button>
               </td>

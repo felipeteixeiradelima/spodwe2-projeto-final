@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./Navbar";
 import Home from "./pages/Home";
@@ -8,21 +8,51 @@ import Reservas from "./pages/Reservas";
 import "./App.css";
 
 function App() {
+  // Estados globais da aplicação
+  const [passeios, setPasseios] = useState([]);
+  const [pontos, setPontos] = useState([]);
+  const [reservas, setReservas] = useState([]);
+  const [carregando, setCarregando] = useState(true);
+
+  // Carrega os dados apenas uma vez quando o App é aberto
+  useEffect(() => {
+    fetch("/dados.json")
+      .then((resposta) => resposta.json())
+      .then((dados) => {
+        setPasseios(dados.passeios);
+        setPontos(dados.pontos);
+        setReservas(dados.reservas);
+        setCarregando(false);
+      })
+      .catch((erro) => console.error("Erro ao carregar dados globais:", erro));
+  }, []);
+
+  if (carregando)
+    return <h2 style={{ textAlign: "center", marginTop: "50px" }}>Carregando a aplicação...</h2>;
+
   return (
     <Router>
       <div className="App">
         <Navbar />
         <main className="main-content">
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/passeios" element={<Passeios />} />
-            <Route path="/pontos" element={<PontosTuristicos />} />
-            <Route path="/reservas" element={<Reservas />} />
+            {/* Passando os dados via PROPS para as páginas */}
+            <Route path="/" element={<Home passeios={passeios} pontos={pontos} />} />
+            <Route
+              path="/passeios"
+              element={<Passeios passeios={passeios} setPasseios={setPasseios} />}
+            />
+            <Route
+              path="/pontos"
+              element={<PontosTuristicos pontos={pontos} setPontos={setPontos} />}
+            />
+            <Route
+              path="/reservas"
+              element={<Reservas reservas={reservas} setReservas={setReservas} />}
+            />
           </Routes>
         </main>
-        <footer className="app-footer">
-          Que Passeio! - Todos os direitos reservados &copy;
-        </footer>
+        <footer className="app-footer">Projeto DWE2 - Reserva de Passeios Turísticos</footer>
       </div>
     </Router>
   );

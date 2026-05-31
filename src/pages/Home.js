@@ -1,24 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Card from "../components/Card";
 
-function Home() {
-  const [passeiosDestaque, setPasseiosDestaque] = useState([]);
-  const [pontosDestaque, setPontosDestaque] = useState([]);
-  const [carregando, setCarregando] = useState(true);
-
-  useEffect(() => {
-    fetch("/dados.json")
-      .then((resposta) => resposta.json())
-      .then((dados) => {
-        // Pega apenas os 3 primeiros registros de cada entidade
-        setPasseiosDestaque(dados.passeios.slice(0, 3));
-        setPontosDestaque(dados.pontos.slice(0, 3));
-        setCarregando(false);
-      })
-      .catch((erro) => console.error("Erro ao carregar dados da Home:", erro));
-  }, []);
-
-  if (carregando) return <p>Carregando destaques...</p>;
+function Home({ passeios, pontos }) {
+  const passeiosDestaque = passeios.slice(0, 3);
+  const pontosDestaque = pontos.slice(0, 3);
 
   return (
     <div>
@@ -27,9 +12,7 @@ function Home() {
         {passeiosDestaque.map((passeio) => (
           <Card
             key={passeio.id}
-            imagem={
-              passeio.imagem
-            }
+            imagem={passeio.imagem}
             titulo={passeio.nome}
             subtitulo={passeio.local}
             texto={`Duração de ${passeio.duracao} horas.`}
@@ -47,11 +30,7 @@ function Home() {
             titulo={ponto.nome}
             subtitulo={ponto.tipo}
             texto={ponto.cidade}
-            destaque={
-              ponto.preco > 0
-                ? `R$ ${ponto.preco}`
-                : "Gratuito"
-            }
+            destaque={ponto.preco > 0 ? `R$ ${ponto.preco}` : "Gratuito"}
           />
         ))}
       </div>

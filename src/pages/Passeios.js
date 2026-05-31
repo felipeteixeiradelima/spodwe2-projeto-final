@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
-function Passeios() {
-  const [passeios, setPasseios] = useState([]);
+function Passeios({ passeios, setPasseios }) {
   const [form, setForm] = useState({
     id: "",
     nome: "",
+    descricao: "",
     local: "",
     preco: "",
     duracao: "",
@@ -12,23 +12,6 @@ function Passeios() {
     nota: "",
   });
   const [editando, setEditando] = useState(false);
-  const [carregando, setCarregando] = useState(true);
-
-  useEffect(() => {
-    fetch("/dados.json")
-      .then((resposta) => resposta.json())
-      .then((dados) => {
-        dados.passeios.map((passeios) => {
-          passeios.preco = `R$ ${passeios.preco.toFixed(2).replace(".", ",")}`;
-          return passeios;
-        });
-        setPasseios(dados.passeios);
-        setCarregando(false);
-      })
-      .catch((erro) =>
-        console.error("Erro ao carregar dados dos passeios:", erro)
-      );
-  }, []);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -41,8 +24,7 @@ function Passeios() {
       setPasseios(passeios.map((p) => (p.id === form.id ? form : p)));
       setEditando(false);
     } else {
-      const novoId =
-        passeios.length > 0 ? Math.max(...passeios.map((p) => p.id)) + 1 : 1;
+      const novoId = passeios.length > 0 ? Math.max(...passeios.map((p) => p.id)) + 1 : 1;
       setPasseios([...passeios, { ...form, id: novoId }]);
     }
     setForm({
@@ -66,8 +48,6 @@ function Passeios() {
       setPasseios(passeios.filter((p) => p.id !== id));
     }
   };
-
-  if (carregando) return <p>Carregando passeios...</p>;
 
   return (
     <div>
@@ -124,7 +104,7 @@ function Passeios() {
           min="0"
           max="5"
           name="nota"
-          placeholder="Nota de Avaliação"
+          placeholder="Nota"
           value={form.nota}
           onChange={handleChange}
           required
@@ -177,16 +157,10 @@ function Passeios() {
               <td>{passeio.horarioInicio}</td>
               <td style={{ minWidth: "50px" }}>⭐ {passeio.nota}</td>
               <td style={{ maxWidth: "110px" }}>
-                <button
-                  className="btn-editar"
-                  onClick={() => editarPasseio(passeio)}
-                >
+                <button className="btn-editar" onClick={() => editarPasseio(passeio)}>
                   Editar
                 </button>
-                <button
-                  className="btn-excluir"
-                  onClick={() => excluirPasseio(passeio.id)}
-                >
+                <button className="btn-excluir" onClick={() => excluirPasseio(passeio.id)}>
                   Excluir
                 </button>
               </td>
