@@ -1,0 +1,293 @@
+{
+  "passeios": [
+    {
+      "id": 1,
+      "nome": "Tour guiado pelo centro da cidade de São Paulo",
+      "local": "São Paulo, SP - Brasil",
+      "preco": 250,
+      "duracao": 6,
+      "horarioInicio": "10:00",
+      "nota": 4.6,
+      "imagem": "./images/passeios/sao-paulo.png"
+    },
+    {
+      "id": 2,
+      "nome": "Passeio histórico com guia por Ouro Preto",
+      "local": "Ouro Preto, MG - Brasil",
+      "preco": 300,
+      "duracao": 8,
+      "horarioInicio": "08:00",
+      "nota": 4.7,
+      "imagem": "./images/passeios/ouro-preto.jpg"
+    },
+    {
+      "id": 3,
+      "nome": "Cristo Redentor e Pão de Açúcar em Um Dia",
+      "local": "Rio de Janeiro, RJ - Brasil",
+      "preco": 450,
+      "duracao": 8,
+      "horarioInicio": "08:30",
+      "nota": 4.9,
+      "imagem": "./images/passeios/rio-de-janeiro.jpg"
+    },
+    {
+      "id": 4,
+
+      "nome": "Roteiro Histórico do Pelourinho e Elevador Lacerda",
+      "local": "Salvador, BA - Brasil",
+      "preco": 180,
+      "duracao": 5,
+      "horarioInicio": "09:00",
+      "nota": 4.8,
+      "imagem": "./images/passeios/salvador.jpg"
+    }
+  ],
+  "pontos": [
+    {
+      "id": 1,
+      "nome": "Catedral da Sé",
+      "tipo": "Catedral",
+      "cidade": "São Paulo, SP - Brasil",
+      "diasFuncionamento": "Todos os dias",
+      "horarioDeFuncionamento": "09:00 - 17:00",
+      "preco": 0,
+      "nota": 4.6,
+      "site": "https://catedraldasesp.com/",
+      "imagem": "./images/pontos/catedral-da-se.png"
+    },
+    {
+      "id": 2,
+      "nome": "Museu Anchieta (Pateo do Collegio)",
+      "tipo": "Museu",
+      "cidade": "São Paulo, SP - Brasil",
+      "diasFuncionamento": "Terça-feira a Sábado",
+      "horarioDeFuncionamento": "09:00 - 16:45",
+      "preco": 26,
+      "nota": 4.1,
+      "site": "https://www.pateodocollegio.com.br/museu-anchieta",
+      "imagem": "./images/pontos/museu-do-anchieta.jpg"
+    },
+    {
+      "id": 3,
+      "nome": "Mosteiro de São Bento",
+      "tipo": "Igreja",
+      "cidade": "São Paulo, SP - Brasil",
+      "diasFuncionamento": "Todos os dias",
+      "horarioDeFuncionamento": "07:00 - 18:00 (horários podem variar)",
+      "preco": 0,
+      "nota": 4.8,
+      "site": "https://www.mosteirodesaobentosp.com.br/",
+      "imagem": "./images/pontos/mosteiro-de-sao-bento.jpg"
+    },
+    {
+      "id": 4,
+      "nome": "Avenida Paulista",
+      "tipo": "Avenida",
+      "cidade": "São Paulo, SP - Brasil",
+      "diasFuncionamento": "Todos os dias",
+      "horarioDeFuncionamento": "Aberto o tempo todo",
+      "preco": 0,
+      "nota": 4.6,
+      "site": "",
+      "imagem": "./images/pontos/avenida-paulista.jpg"
+    },
+    {
+      "id": 5,
+      "nome": "Museu da Inconfidência",
+      "tipo": "Museu",
+      "cidade": "Ouro Preto, MG - Brasil",
+      "diasFuncionamento": "Terça-feira a Sábado",
+      "horarioDeFuncionamento": "10:00 - 20:00 (horários podem variar)",
+      "preco": 0,
+      "nota": 4.9,
+      "site": "https://museudainconfidencia.museus.gov.br/",
+      "imagem": "./images/pontos/museu-da-inconfidencia.jpg"
+    },
+    {
+      "id": 6,
+      "nome": "Praça Tiradentes",
+      "tipo": "Praça",
+      "cidade": "Ouro Preto, MG - Brasil",
+      "diasFuncionamento": "Todos os dias",
+      "horarioDeFuncionamento": "Aberto o tempo todo",
+      "preco": 0,
+      "nota": 4.8,
+      "site": "https://www.ouropreto.mg.gov.br/turismo/atrativo-item/1364",
+      "imagem": "./images/pontos/praca-tiradentes.jpg"
+    },
+    {
+      "id": 7,
+      "nome": "Igreja de São Francisco de Assis",
+      "tipo": "Igreja",
+      "cidade": "Ouro Preto, MG - Brasil",
+      "diasFuncionamento": "Terça-feira a Sábado",
+      "horarioDeFuncionamento": "08:30 - 17:00",
+      "preco": 10,
+      "nota": 4.7,
+      "site": "https://www.ouropreto.mg.gov.br/turismo/atrativo-item/585",
+      "imagem": "./images/pontos/igreja-sao-francisco-ouro-preto.jpg"
+    },
+    {
+      "id": 8,
+      "nome": "Mina do Chico Rei",
+      "tipo": "Mina",
+      "cidade": "Ouro Preto, MG - Brasil",
+      "diasFuncionamento": "Todos os dias",
+      "horarioDeFuncionamento": "08:00 - 17:00",
+      "preco": 70,
+      "nota": 4.5,
+      "site": "https://www.ouropreto.mg.gov.br/turismo/atrativo-item/568",
+      "imagem": "./images/pontos/mina-do-chico-rei.jpg"
+    },
+    {
+      "id": 9,
+      "nome": "Cristo Redentor",
+      "tipo": "Monumento",
+      "cidade": "Rio de Janeiro, RJ - Brasil",
+      "diasFuncionamento": "Todos os dias",
+      "horarioDeFuncionamento": "08:00 - 19:00",
+      "preco": 94,
+      "nota": 4.9,
+      "site": "https://santuariocristoredentor.com.br/",
+      "imagem": "./images/pontos/cristo-redentor.jpg"
+    },
+    {
+      "id": 10,
+      "nome": "Pão de Açúcar",
+      "tipo": "Mirante",
+      "cidade": "Rio de Janeiro, RJ - Brasil",
+      "diasFuncionamento": "Todos os dias",
+      "horarioDeFuncionamento": "08:30 - 20:00",
+      "preco": 160,
+      "nota": 4.8,
+      "site": "https://bondinho.com.br/",
+      "imagem": "./images/pontos/pao-de-acucar.jpg"
+    },
+    {
+      "id": 11,
+      "nome": "Praia de Copacabana",
+      "tipo": "Praia",
+      "cidade": "Rio de Janeiro, RJ - Brasil",
+      "diasFuncionamento": "Todos os dias",
+      "horarioDeFuncionamento": "Aberto o tempo todo",
+      "preco": 0,
+      "nota": 4.7,
+      "site": "https://www.metrorio.com.br/NavegueRio/PontosTuristicosInterna?p_ponto=29",
+      "imagem": "./images/pontos/copacabana.png"
+    },
+    {
+      "id": 12,
+      "nome": "Pelourinho",
+      "tipo": "Bairro Histórico",
+      "cidade": "Salvador, BA - Brasil",
+      "diasFuncionamento": "Todos os dias",
+      "horarioDeFuncionamento": "Aberto o tempo todo",
+      "preco": 0,
+      "nota": 4.7,
+      "site": "",
+      "imagem": "./images/pontos/pelourinho.jpg"
+    },
+    {
+      "id": 13,
+      "nome": "Igreja e Convento de São Francisco",
+      "tipo": "Igreja",
+      "cidade": "Salvador, BA - Brasil",
+      "diasFuncionamento": "Todos os dias",
+      "horarioDeFuncionamento": "09:00 - 17:30 (horários podem variar)",
+      "preco": 10,
+      "nota": 4.8,
+      "site": "https://www.salvadordaBA.com/experiencias/igreja-e-convento-de-sao-francisco/",
+      "imagem": "./images/pontos/igreja-sao-francisco-salvador.jpg"
+    },
+    {
+      "id": 14,
+      "nome": "Elevador Lacerda",
+      "tipo": "Monumento",
+      "cidade": "Salvador, BA - Brasil",
+      "diasFuncionamento": "Todos os dias",
+      "horarioDeFuncionamento": "07:00 - 22:00",
+      "preco": 0.15,
+      "nota": 4.6,
+      "site": "https://mobilidade.salvador.ba.gov.br/elevador-lacerda/",
+      "imagem": "./images/pontos/elevador-lacerda.jpg"
+    },
+    {
+      "id": 15,
+      "nome": "Mercado Modelo",
+      "tipo": "Mercado",
+      "cidade": "Salvador, BA - Brasil",
+      "diasFuncionamento": "Segunda-feira a Sábado",
+      "horarioDeFuncionamento": "09:00 - 18:00",
+      "preco": 0,
+      "nota": 4.5,
+      "site": "http://www.mercadomodelosalvador.com/",
+      "imagem": "./images/pontos/mercado-modelo.jpg"
+    }
+  ],
+  "reservas": [
+    {
+      "id": 1,
+      "nomeCliente": "Felipe Teixeira de Lima",
+      "emailCliente": "felipeteixeiradelima@gmail.com",
+      "telefoneCliente": "+55 (11) 94285-2902",
+      "passeioId": 1,
+      "data": "2026-07-05T03:00:00.000Z"
+    },
+    {
+      "id": 2,
+      "nomeCliente": "Rafael Teixeira Paulino",
+      "emailCliente": "rafaelpaulino@hotmail.com",
+      "telefoneCliente": "+55 (11) 92759-0285",
+      "passeioId": 1,
+      "data": "2026-09-11T03:00:00.000Z"
+    },
+    {
+      "id": 3,
+      "nomeCliente": "Amanda Jen",
+      "emailCliente": "jen.amanda@outlook.com",
+      "telefoneCliente": "+55 (11) 98624-2504",
+      "passeioId": 2,
+      "data": "2026-07-22T03:00:00.000Z"
+    },
+    {
+      "id": 4,
+      "nomeCliente": "Leticia Cardoso Furtado",
+      "emailCliente": "furtadolet@gmail.com",
+      "telefoneCliente": "+55 (11) 90192-1952",
+      "passeioId": 2,
+      "data": "2026-12-15T03:00:00.000Z"
+    },
+    {
+      "id": 5,
+      "nomeCliente": "Vinícius Thiago de Santana",
+      "emailCliente": "santanavinithiago@outlook.com",
+      "telefoneCliente": "+55 (11) 97489-0384",
+      "passeioId": 3,
+      "data": "2026-09-07T03:00:00.000Z"
+    },
+    {
+      "id": 6,
+      "nomeCliente": "Ana Maria Fausta Bonfim Santos",
+      "emailCliente": "namariafaustabs@hotmail.com",
+      "telefoneCliente": "+55 (11) 94816-8938",
+      "passeioId": 3,
+      "data": "2027-07-08T03:00:00.000Z"
+    },
+    {
+      "id": 7,
+      "nomeCliente": "Thiago Galvão Ferreira",
+      "emailCliente": "thiagoferreira@gmail.com",
+      "telefoneCliente": "+55 (11) 95920-1058",
+      "passeioId": 4,
+      "data": "2026-11-06T03:00:00.000Z"
+    },
+    {
+      "id": 8,
+      "nomeCliente": "Randu José Costa Aquino Ribeiro",
+      "emailCliente": "randuribeiro@hotmail.com",
+      "telefoneCliente": "+55 (11) 96716-1389",
+      "passeioId": 4,
+      "data": "2027-01-15T03:00:00.000Z"
+    }
+  ]
+}
