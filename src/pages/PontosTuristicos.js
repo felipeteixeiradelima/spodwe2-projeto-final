@@ -13,6 +13,9 @@ function PontosTuristicos({ pontos, setPontos }) {
   });
   const [editando, setEditando] = useState(false);
 
+  const [termoBusca, setTermoBusca] = useState("");
+  const [ordenacao, setOrdenacao] = useState({ campo: "", direcao: "asc" });
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setForm({ ...form, [name]: value });
@@ -24,7 +27,8 @@ function PontosTuristicos({ pontos, setPontos }) {
       setPontos(pontos.map((p) => (p.id === form.id ? form : p)));
       setEditando(false);
     } else {
-      const novoId = pontos.length > 0 ? Math.max(...pontos.map((p) => p.id)) + 1 : 1;
+      const novoId =
+        pontos.length > 0 ? Math.max(...pontos.map((p) => p.id)) + 1 : 1;
       setPontos([...pontos, { ...form, id: novoId }]);
     }
     setForm({
@@ -45,9 +49,43 @@ function PontosTuristicos({ pontos, setPontos }) {
   };
 
   const excluirPonto = (id) => {
-    if (window.confirm("Tem certeza que deseja excluir este ponto turístico?")) {
+    if (
+      window.confirm("Tem certeza que deseja excluir este ponto turístico?")
+    ) {
       setPontos(pontos.filter((p) => p.id !== id));
     }
+  };
+
+  const handleOrdenar = (campo) => {
+    const direcao =
+      ordenacao.campo === campo && ordenacao.direcao === "asc" ? "desc" : "asc";
+    setOrdenacao({ campo, direcao });
+  };
+
+  let pontosProcessados = pontos.filter((ponto) => {
+    return (
+      ponto.nome.toLowerCase().includes(termoBusca.toLowerCase()) ||
+      ponto.cidade.toLowerCase().includes(termoBusca.toLowerCase())
+    );
+  });
+
+  if (ordenacao.campo) {
+    pontosProcessados.sort((a, b) => {
+      let valorA = a[ordenacao.campo];
+      let valorB = b[ordenacao.campo];
+
+      if (typeof valorA === "string") valorA = valorA.toLowerCase();
+      if (typeof valorB === "string") valorB = valorB.toLowerCase();
+
+      if (valorA < valorB) return ordenacao.direcao === "asc" ? -1 : 1;
+      if (valorA > valorB) return ordenacao.direcao === "asc" ? 1 : -1;
+      return 0;
+    });
+  }
+
+  const renderIconeOrdenacao = (campo) => {
+    if (ordenacao.campo !== campo) return null;
+    return ordenacao.direcao === "asc" ? " ▲" : " ▼";
   };
 
   return (
@@ -114,7 +152,6 @@ function PontosTuristicos({ pontos, setPontos }) {
           value={form.site}
           onChange={handleChange}
         />
-        <br />
         <button type="submit">{editando ? "Atualizar" : "Adicionar"}</button>
         {editando && (
           <button
@@ -139,29 +176,59 @@ function PontosTuristicos({ pontos, setPontos }) {
         )}
       </form>
 
+      <div className="filtros-container">
+        <input
+          type="text"
+          placeholder="🔍 Buscar por nome ou cidade..."
+          value={termoBusca}
+          onChange={(e) => setTermoBusca(e.target.value)}
+          className="input-busca"
+        />
+      </div>
+
       <table className="crud-table">
         <thead>
           <tr>
-            <th>ID</th>
-            <th>Nome</th>
-            <th>Cidade</th>
-            <th>Dias</th>
-            <th>Horário</th>
-            <th>Preço (R$)</th>
-            <th>Nota</th>
-            <th>Website</th>
+            <th onClick={() => handleOrdenar("id")}>
+              ID {renderIconeOrdenacao("id")}
+            </th>
+            <th onClick={() => handleOrdenar("nome")}>
+              Nome {renderIconeOrdenacao("nome")}
+            </th>
+            <th onClick={() => handleOrdenar("cidade")}>
+              Cidade {renderIconeOrdenacao("cidade")}
+            </th>
+            <th onClick={() => handleOrdenar("diasFuncionamento")}>
+              Dias {renderIconeOrdenacao("diasFuncionamento")}
+            </th>
+            <th onClick={() => handleOrdenar("horarioDeFuncionamento")}>
+              Horário {renderIconeOrdenacao("horarioDeFuncionamento")}
+            </th>
+            <th onClick={() => handleOrdenar("preco")}>
+              Preço (R$) {renderIconeOrdenacao("preco")}
+            </th>
+            <th onClick={() => handleOrdenar("nota")}>
+              Nota {renderIconeOrdenacao("nota")}
+            </th>
+            <th onClick={() => handleOrdenar("site")}>
+              Website {renderIconeOrdenacao("site")}
+            </th>
             <th>Ações</th>
           </tr>
         </thead>
         <tbody>
-          {pontos.map((ponto) => (
+          {pontosProcessados.map((ponto) => (
             <tr key={ponto.id}>
               <td>{ponto.id}</td>
               <td>{ponto.nome}</td>
               <td>{ponto.cidade}</td>
               <td>{ponto.diasFuncionamento}</td>
               <td>{ponto.horarioDeFuncionamento}</td>
-              <td>{ponto.preco === 0 || ponto.preco === "0" ? "Gratuito" : ponto.preco}</td>
+              <td>
+                {ponto.preco === 0 || ponto.preco === "0"
+                  ? "Gratuito"
+                  : ponto.preco}
+              </td>
               <td style={{ minWidth: "50px" }}>⭐ {ponto.nota}</td>
               <td>
                 {ponto.site ? (
@@ -178,15 +245,28 @@ function PontosTuristicos({ pontos, setPontos }) {
                 )}
               </td>
               <td style={{ maxWidth: "125px" }}>
-                <button className="btn-editar" onClick={() => editarPonto(ponto)}>
+                <button
+                  className="btn-editar"
+                  onClick={() => editarPonto(ponto)}
+                >
                   Editar
                 </button>
-                <button className="btn-excluir" onClick={() => excluirPonto(ponto.id)}>
+                <button
+                  className="btn-excluir"
+                  onClick={() => excluirPonto(ponto.id)}
+                >
                   Excluir
                 </button>
               </td>
             </tr>
           ))}
+          {pontosProcessados.length === 0 && (
+            <tr>
+              <td colSpan="9" style={{ textAlign: "center" }}>
+                Nenhum ponto encontrado.
+              </td>
+            </tr>
+          )}
         </tbody>
       </table>
     </div>

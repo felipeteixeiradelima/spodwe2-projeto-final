@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Navbar from "./Navbar";
+import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Passeios from "./pages/Passeios";
 import PontosTuristicos from "./pages/PontosTuristicos";
@@ -26,7 +26,9 @@ function App() {
         });
         dados.pontos.map((pontos) => {
           pontos.preco =
-            pontos.preco === 0 ? pontos.preco : `R$ ${pontos.preco.toFixed(2).replace(".", ",")}`;
+            pontos.preco === 0
+              ? pontos.preco
+              : `R$ ${pontos.preco.toFixed(2).replace(".", ",")}`;
           return pontos;
         });
         dados.reservas.map((reserva) => {
@@ -42,7 +44,11 @@ function App() {
   }, []);
 
   if (carregando)
-    return <h2 style={{ textAlign: "center", marginTop: "50px" }}>Carregando a aplicação...</h2>;
+    return (
+      <h2 style={{ textAlign: "center", marginTop: "50px" }}>
+        Carregando a aplicação...
+      </h2>
+    );
 
   return (
     <Router>
@@ -51,22 +57,33 @@ function App() {
         <main className="main-content">
           <Routes>
             {/* Passando os dados via PROPS para as páginas */}
-            <Route path="/" element={<Home passeios={passeios} pontos={pontos} />} />
+            <Route
+              path="/"
+              element={<Home passeios={passeios} pontos={pontos} />}
+            />
             <Route
               path="/passeios"
-              element={<Passeios passeios={passeios} setPasseios={setPasseios} />}
+              element={
+                <Passeios passeios={passeios} setPasseios={setPasseios} />
+              }
             />
             <Route
               path="/pontos"
-              element={<PontosTuristicos pontos={pontos} setPontos={setPontos} />}
+              element={
+                <PontosTuristicos pontos={pontos} setPontos={setPontos} />
+              }
             />
             <Route
               path="/reservas"
-              element={<Reservas reservas={reservas} setReservas={setReservas} />}
+              element={
+                <Reservas reservas={reservas} setReservas={setReservas} />
+              }
             />
           </Routes>
         </main>
-        <footer className="app-footer">Projeto DWE2 - Reserva de Passeios Turísticos</footer>
+        <footer className="app-footer">
+          Projeto DWE2 - Reserva de Passeios Turísticos
+        </footer>
       </div>
     </Router>
   );

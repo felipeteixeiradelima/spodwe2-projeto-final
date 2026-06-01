@@ -8,7 +8,7 @@
   --accent-yellow: #ffee58; /* Amarelo da asa direita */
   --bg-light: #f4f7f6; /* Fundo levemente cinza/azulado */
   --text-dark: #2c3e50;
-  --border-color: #cfd8dc;
+  --border-color: #a5acaf;
 }
 
 /* Reset básico e tipografia */
@@ -112,16 +112,28 @@ h3 {
   padding: 25px;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-  border-left: 5px solid var(--accent-yellow); /* Detalhe em amarelo no canto do form */
+  border-left: 5px solid var(--accent-yellow);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  align-items: flex-start;
+}
+
+.crud-form h3 {
+  width: 100%;
+  margin-top: 0;
+  margin-bottom: 5px;
+  color: var(--primary-blue);
 }
 
 .crud-form input {
-  margin-right: 15px;
-  margin-bottom: 15px;
+  flex: 1 1 240px;
+  margin: 0;
   padding: 10px 12px;
   border: 1px solid var(--border-color);
   border-radius: 6px;
   font-size: 1rem;
+  box-sizing: border-box;
   transition: border-color 0.3s, box-shadow 0.3s;
 }
 
@@ -129,6 +141,22 @@ h3 {
   outline: none;
   border-color: var(--accent-cyan);
   box-shadow: 0 0 0 3px rgba(41, 182, 246, 0.2);
+}
+
+.crud-form textarea {
+  width: 100%;
+  flex: 1 1 100%;
+  min-height: 80px;
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: 1px solid var(--border-color);
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+.crud-form button {
+  flex: 0 1 auto;
+  align-self: center;
 }
 
 /* =========================================
@@ -163,11 +191,11 @@ button:hover {
 }
 
 .btn-editar:hover {
-  background-color: #0288D1;
+  background-color: #0288d1;
 }
 
 .btn-excluir {
-  background-color: #E53935;
+  background-color: #e53935;
   color: white;
   margin: 5px;
   padding: 8px 12px;
@@ -187,7 +215,7 @@ button:hover {
 }
 
 .btn-excluir:hover {
-  background-color: #C62828;
+  background-color: #c62828;
 }
 
 /* =========================================
@@ -295,4 +323,37 @@ button:hover {
   font-weight: bold;
   margin: 0;
   text-align: right;
+}
+
+/* =========================================
+   Filtros e Busca
+   ========================================= */
+.filtros-container {
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.input-busca {
+  width: 300px;
+  padding: 10px 15px;
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  font-size: 1rem;
+  transition: box-shadow 0.3s;
+}
+
+.input-busca:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(41, 182, 246, 0.2);
+  border-color: var(--accent-cyan);
+}
+
+.crud-table th {
+  user-select: none;
+  cursor: "pointer";
+}
+
+.crud-table th:hover {
+  background-color: #12195e;
 }
