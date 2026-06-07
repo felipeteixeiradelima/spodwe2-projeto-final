@@ -8,7 +8,7 @@
       "duracao": 6,
       "horarioInicio": "10:00",
       "nota": 4.6,
-      "imagem": "./images/passeios/sao-paulo.png"
+      "imagem": "./images/passeios/sao-paulo.jpg"
     },
     {
       "id": 2,
@@ -53,7 +53,7 @@
       "preco": 0,
       "nota": 4.6,
       "site": "https://catedraldasesp.com/",
-      "imagem": "./images/pontos/catedral-da-se.png"
+      "imagem": "./images/pontos/catedral-da-se.jpg"
     },
     {
       "id": 2,
@@ -173,7 +173,7 @@
       "preco": 0,
       "nota": 4.7,
       "site": "https://www.metrorio.com.br/NavegueRio/PontosTuristicosInterna?p_ponto=29",
-      "imagem": "./images/pontos/copacabana.png"
+      "imagem": "./images/pontos/copacabana.jpg"
     },
     {
       "id": 12,
